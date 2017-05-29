@@ -1,0 +1,38 @@
+コンフリクトについて
+1.developをプルする
+
+2.developからブランチ　feature-A　を作成
+3.feature-A　ブランチにて、index.htmlファイルを下記の通り修正
+　こんにちは　→　おはようございます。
+4.feature-A　修正内容をコミット
+
+5.developからブランチ　feature-B　を作成
+6.feature-B　ブランチにて、index.htmlファイルを下記の通り修正
+　こんにちは　→　こんばんは
+7.feature-B　修正内容をコミット
+
+8.developブランチにて、developブランチにfeature-Aブランチをマージする
+　git merge --no-ff feature-A
+
+9.developブランチにて、developブランチにfeature-Bブランチをマージする
+　git merge --no-ff feature-B
+
+10.feature-Aとfeature-Bの修正内容が異なりコンフリクト（衝突）が発生する
+　--------------エラー内容-------------------
+　Auto-merging HTMLプロジェクト/index.html
+　CONFLICT (content): Merge conflict in HTMLプロジェクト/index.html
+　Automatic merge failed; fix conflicts and then commit the result.
+　--------------エラー内容-------------------
+
+　※index.htmlファイルを開くとコンフリクト部分がHEADで囲まれているので、
+　　修正箇所を確認したら、「git checkout -f」コマンドで元に戻す。
+
+11.今回はfeature-Aの修正内容を正とする為、feature-Bの内容を下記の通り修正（feature-Aに合わせる）
+　こんばんは　→　おはようございます。
+12.feature-B　修正内容をコミット
+
+12.developブランチにて、developブランチにfeature-Bブランチをマージする
+
+13.不要になったブランチを削除する
+　git branch -D feature-A
+　git branch -D feature-B
