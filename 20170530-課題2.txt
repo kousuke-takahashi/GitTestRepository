@@ -17,7 +17,7 @@
 9.developブランチにて、developブランチにfeature-Bブランチをマージする
 　git merge --no-ff feature-B
 
-10.feature-Aとfeature-Bの修正内容が異なりコンフリクト（衝突）が発生する
+10.feature-Aとfeature-Bの修正内容が異なりコンフリクト（競合）が発生する
 　--------------エラー内容-------------------
 　Auto-merging HTMLプロジェクト/index.html
 　CONFLICT (content): Merge conflict in HTMLプロジェクト/index.html

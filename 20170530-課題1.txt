@@ -1,14 +1,26 @@
-コンフリクトについて
-1.developをプルする
+コンフリクトについて学ぼう（課題）
+
+1.GitHubのdevelopブランチをプルしてローカルのdevelopブランチを更新する
 
 2.developからブランチ　feature-A　を作成
-3.feature-A　ブランチにて、index.htmlファイルを下記の通り修正
+
+　【ポイント】
+　新規にブランチを作成し切り替える場合は、
+　「git checkout -b feature-A」と実行する。
+　　git checkoutコマンドにオプション「-b」を付ける事で、
+　　git branch feature-A　と
+　　git checkout feature-A　を順に実行した結果と等しくなる
+
+3.feature-A　ブランチにて、index.htmlファイルの内容を下記の通り修正
 　こんにちは　→　おはようございます。
+
 4.feature-A　修正内容をコミット
 
 5.developからブランチ　feature-B　を作成
-6.feature-B　ブランチにて、index.htmlファイルを下記の通り修正
+
+6.feature-B　ブランチにて、index.htmlファイルの内容を下記の通り修正
 　こんにちは　→　こんばんは
+
 7.feature-B　修正内容をコミット
 
 8.developブランチにて、developブランチにfeature-Aブランチをマージする
@@ -17,7 +29,7 @@
 9.developブランチにて、developブランチにfeature-Bブランチをマージする
 　git merge --no-ff feature-B
 
-10.feature-Aとfeature-Bの修正内容が異なりコンフリクト（衝突）が発生する
+10.feature-Aとfeature-Bの修正内容が異なりコンフリクト（競合）が発生する
 　--------------エラー内容-------------------
 　Auto-merging HTMLプロジェクト/index.html
 　CONFLICT (content): Merge conflict in HTMLプロジェクト/index.html
