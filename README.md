@@ -1,2 +1,2 @@
 # GitTestRepository
-授業用
+授業用2
